@@ -1,11 +1,14 @@
-# movie-recommend-proxy
+# Rate-limiter-proxy-by-redis
 A proxy service for movie recommendations, featuring rate limiting.
 
 # Set-up
 ```shell
 # 1. run a redis server (if you don't have one)
 docker run --name movie-recomend-redis -d -p 6379:6379 redis redis-server --requirepass secretpassword
-# 2 start the proxy server (the parameters limit the backend can only process 10 requests in one second )
+# 2 start the proxy server
+# Note: the following parameters assume that the
+# backend service `http://localhost:8082/recommend/userid` is running.
+# And the parameters limit the backend can only process 10 requests per second.
 go run main/start.go \
   -maxRequest=10 \
   -expireTime=1 \
@@ -17,7 +20,7 @@ go run main/start.go \
   -endpoint="/recommend/"
 ```
 
-# Example
+# Showcase
 -  At 10 requests per second (RPS) to the `/recommend` endpoint, the service operates without errors.
 and no error.
 ![img.png](images/img.png)
