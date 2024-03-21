@@ -5,7 +5,7 @@ A proxy service for Movie recommendation
 ```shell
 # 1. run a redis server (if you don't have one)
 docker run --name movie-recomend-redis -d -p 6379:6379 redis redis-server --requirepass secretpassword
-# 2 start the proxy server
+# 2 start the proxy server (the parameters limit the backend can only process 10 requests in one second )
 go run main/start.go \
   -maxRequest=10 \
   -expireTime=1 \
