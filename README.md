@@ -1,5 +1,5 @@
 # Rate-limiter-proxy-by-redis
-A proxy service for movie recommendations, featuring rate limiting.
+A proxy server for rate limiting, implemented by Redis and Golang
 
 # Set-up
 ```shell
