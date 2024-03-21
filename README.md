@@ -24,5 +24,5 @@ and no error.
 - At 11 RPS, the service begins to enforce rate limiting, resulting in some requests being denied to maintain the rate limit.
 ![img.png](images/img1.png)
 
-# Latency Introduced by the Proxy server
-- If the redis server and proxy server run on the same machine, the proxy server adds approximately 2-4 ms of latency.
+# Latency Introduced by the Proxy Server
+- If the Redis server and proxy server run on the same machine, the proxy server adds approximately 2-4 ms of latency.
