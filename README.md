@@ -1,5 +1,5 @@
 # movie-recommend-proxy
-A proxy service for Movie recommendation
+A proxy service for movie recommendations, featuring rate limiting.
 
 # Set-up
 ```shell
