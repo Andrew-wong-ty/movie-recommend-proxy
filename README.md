@@ -22,7 +22,6 @@ go run main/start.go \
 
 # Showcase
 -  At 10 requests per second (RPS) to the `/recommend` endpoint, the service operates without errors.
-and no error.
 ![img.png](images/img.png)
 - At 11 RPS, the service begins to enforce rate limiting, resulting in some requests being denied to maintain the rate limit.
 ![img.png](images/img1.png)
